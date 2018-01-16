@@ -1,4 +1,4 @@
-<div class="postbox">
+<!-- <div class="postbox">
   <form action="<%= posts_url %>" method="POST">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
 
@@ -9,9 +9,28 @@
     <br>
     <label for="body"> Body </label>
     <br>
-    <textarea rows="8" cols="50" id="body" name="post[body]"></textarea>
+    <textarea rows="15" cols="75" id="body" name="post[body]"></textarea>
 
     <br>
     <input type="submit" value="Post" />
   </form>
+</div> -->
+
+<div class="postbox">
+<%= form_with model: @post, local: true do |form| %>
+
+        <p>
+          <%= form.label :title %><br>
+          <%= form.text_field :title, size: 25 %>
+        </p>
+
+        <p>
+          <%= form.label :body %><br>
+          <%= form.text_area :body, cols: "75", rows: "15" %>
+        </p>
+
+        <p>
+          <%= form.submit %>
+        </p>
+      <% end %>
 </div>

@@ -11,20 +11,8 @@
   font: 16px Helvetica, Sans-Serif;
   letter-spacing: -1px;
   background: rgb(255, 255, 255);
-  background: rgba(255, 255, 255, .8);
+  background: rgba(255, 255, 255, 0.8);
   padding: 10px;
-}
-
-.otherstextbox {
-  font: 16px Helvetica, Sans-Serif;
-  letter-spacing: -1px;
-  background: rgb(255, 255, 255);
-  background: rgba(255, 255, 255, 0.6);
-  padding: 10px;
-}
-
-.othersbox {
-  border: 1px solid black;
 }
 
 #othertitle {
@@ -40,12 +28,12 @@
 }
 
 .postbox {
-  background-color: green;
+  background-color: rgba(0, 0, 0, 0.3);
   width: 500px;
+  padding: 2px;
 }
 
 .formbox {
-  background-color: white;
   width: 500px;
 }
 
@@ -53,4 +41,13 @@
   background-color: white;
 }
 
+.navlinkbox{
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
 
+#newtitle {
+  font-style: Helvetica, Sans-Serif;
+}

@@ -17,4 +17,5 @@
 body {
   display: inline-flex;
   background-image: url("https://www.drweil.com/wp-content/uploads/2017/01/health-wellness_balanced-living_wellness-therapies_traditional-chinese-medicine_1440x1080_146807390-1024x768.jpeg");
+  background-size: 100%;
 }

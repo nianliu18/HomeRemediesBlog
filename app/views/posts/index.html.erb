@@ -11,6 +11,7 @@
     <div class="textbox">
       <h4><%= post.title %></h4>
       <p><%= post.body %></p>
+      <%= link_to 'Edit', edit_post_path(post) %>
     </div>
   <%end%>
   </div>
@@ -18,7 +19,7 @@
   <div>
   <h1 id="othertitle"> Other Home Remedy Posts</h1>
   <% @posts.where.not(user_id: current_user.id).each do |post| %>
-    <div class="otherstextbox">
+    <div class="textbox">
       <h4><%= post.title %></h4>
       <p><%= post.body %></p>
       <p><%= "By #{post.user.email}" %></p>

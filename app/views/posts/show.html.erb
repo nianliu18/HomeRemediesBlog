@@ -1,0 +1,19 @@
+ <div class="navlinkbox">
+  <%= link_to "Write Post", new_post_url %>
+  <%= link_to 'Back', posts_url %>
+  <%= link_to "Sign out", destroy_user_session_path, method: "DELETE" %>
+  </div>
+
+<div>
+<h1>
+  <strong>Topic</strong>
+  <%= @post.title %>
+</h1>
+
+<p class="textbox">
+  <strong>Body</strong>
+  <%= @post.body %>
+</p>
+<%= link_to 'Back', posts_url %>
+
+</div>

@@ -11,6 +11,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   def create
     post = Post.new(post_params)
     post.user = current_user
@@ -19,9 +23,9 @@ class PostsController < ApplicationController
   end
 
   def update
-    @article = Post.find(params[:id])
+    @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to posts_url
+      redirect_to post_url
     else
       render 'edit'
     end

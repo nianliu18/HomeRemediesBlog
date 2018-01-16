@@ -1,8 +1,11 @@
+<div class="navlinkbox">
+  <%= link_to 'Back', posts_url %>
+  <%= link_to "Sign out", destroy_user_session_path, method: "DELETE" %>
+</div>
 
 <div class="formbox">
-  <h1> Write a Post </h1>
+  <h1 id="newtitle"> Write a Post </h1>
 
   <%= render 'form' %>
 
-  <%= link_to 'Back', posts_url %>
 </div>
