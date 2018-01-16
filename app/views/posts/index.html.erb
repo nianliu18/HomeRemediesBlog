@@ -1,23 +1,28 @@
-<div class='navBar'>
-<%= link_to "Write a post", new_post_url %>
-<%= link_to "Sign out", destroy_user_session_path, method: "DELETE" %>
-</div>
 
+<div class="container">
+  <div class="linksbox">
+  <%= link_to "Write Post", new_post_url %>
+  <%= link_to "Sign out", destroy_user_session_path, method: "DELETE" %>
+  </div>
 
-<h1> Your Remedy Posts </h1>
-<% @posts.where(user_id: current_user.id).each do |post| %>
   <div>
+  <h1 id="usertitle"> Your Remedy Posts </h1>
+  <% @posts.where(user_id: current_user.id).each do |post| %>
+    <div class="textbox">
       <h4><%= post.title %></h4>
       <p><%= post.body %></p>
+    </div>
+  <%end%>
   </div>
 
-<%end%>
-
-<h1> Other Home Remedy Posts</h1>
-<% @posts.where.not(user_id: current_user.id).each do |post| %>
   <div>
-    <h4><%= post.title %></h4>
-    <p><%= post.body %></p>
-    <p><%= "By #{post.user.email}" %></p>
+  <h1 id="othertitle"> Other Home Remedy Posts</h1>
+  <% @posts.where.not(user_id: current_user.id).each do |post| %>
+    <div class="otherstextbox">
+      <h4><%= post.title %></h4>
+      <p><%= post.body %></p>
+      <p><%= "By #{post.user.email}" %></p>
+    </div>
+  <% end %>
   </div>
-<% end %>
+<div>

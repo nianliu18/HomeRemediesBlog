@@ -1,3 +1,56 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  border: 1px solid black;
+  background-image: url("https://n6-img-fp.akamaized.net/free-photo/traditional-chinese-medicine-and-ancient-medical-book-on-bamboo_1387-273.jpg?size=338&amp;ext=jpg");
+}
+
+.textbox {
+  font: 16px Helvetica, Sans-Serif;
+  letter-spacing: -1px;
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, .8);
+  padding: 10px;
+}
+
+.otherstextbox {
+  font: 16px Helvetica, Sans-Serif;
+  letter-spacing: -1px;
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+}
+
+.othersbox {
+  border: 1px solid black;
+}
+
+#othertitle {
+  color: white;
+  background-color: green;
+  display: inline-block;
+}
+
+#usertitle {
+  color: white;
+  background-color: green;
+  display: inline-block;
+}
+
+.postbox {
+  background-color: green;
+  width: 500px;
+}
+
+.formbox {
+  background-color: white;
+  width: 500px;
+}
+
+.linksbox {
+  background-color: white;
+}
+
+
