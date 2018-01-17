@@ -9,9 +9,11 @@
   <h1 id="usertitle"> Your Remedy Posts </h1>
   <% @posts.where(user_id: current_user.id).each do |post| %>
     <div class="textbox">
-      <h4><%= post.title %></h4>
-      <p><%= post.body %></p>
+      <h4><%= post.title %></h4><br>
+      <p><%= post.body %></p><br>
+      <br>
       <%= link_to 'Edit', edit_post_path(post) %>
+      <%= link_to 'Show', post_path(post) %>
     </div>
   <%end%>
   </div>
